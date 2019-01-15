@@ -8,6 +8,7 @@
         if (this.readyState == 4 && this.status == 200) { //4 = ready ; 200 = okay
           var myData = JSON.parse(this.responseText);
           window.alert(myData.bento[0].type + " :: " + myData.bento[0].price + " :: " + myData.bento[0].ingredients);
+          window.alert(myData.bento[1].type + " :: " + myData.bento[1].price + " :: " + myData.bento[1].ingredients);
         }
       };
       xmlhttp.open("GET", "sample.json", true);
