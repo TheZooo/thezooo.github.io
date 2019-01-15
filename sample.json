@@ -11,6 +11,19 @@
            "ule",
            "edamame"
         ]
+      },
+      {
+        "type": "soft shell crab",
+        "price": 9.99,
+        "ingredients": [
+           "rice",
+           "ume",
+           "crab",
+           "tears",
+           "furlake",
+           "ule",
+           "edamame"
+        ]
       }
     ]
 }
