@@ -1,0 +1,95 @@
+/*
+#OA1128 : rgb(10, 17, 40) : Rich Blueish-Black
+#001F54 : rgb(0, 31, 84) : Oxford Blue
+#034078 : rgb(3, 64, 120) : Dark Cyan
+#1282A2 : rgb(18, 130, 162) : CG Blue
+#FEFCFB : rgb(254, 252, 251) : Basically White
+*/
+body {
+  background:url("https://previews.123rf.com/images/epine/epine1607/epine160700098/60100800-shrimp-vector-drawing-seamless-seafood-pattern-shrimp-food-background-great-for-seafood-restaurant-m.jpg");
+  background-size:cover;
+}
+
+#title {
+  width:98.29vw;
+  height:15vh;
+  font-size:80px;
+  padding-left:3px;
+  border:rgba(0, 31, 84, 0.8) 2px solid;
+  color:rgb(254, 252, 251);
+  background-color:rgba(10, 17, 40, 0.8);
+  margin-bottom:5px;
+}
+#orderBox {
+  width:98.13vw;
+  height:20vh;
+  padding:5px;
+  float:left;
+  background-color:gray;
+}
+flexbox {
+  display:flex;
+}
+.itemBox {
+  width:33.3vw;
+  height:30vh;
+  float:left;
+  border:rgba(0, 31, 84, 0.8) 2px solid;
+  margin-bottom:5px;
+}
+.itemHead {
+  width:99%;
+  height:20%;
+  color:rgb(254, 252, 251);
+  font-size:30px;
+  padding-left:5px;
+  background-color:rgba(0, 31, 84, 0.5);
+}
+.amtOrder {
+  margin-left:5px;
+}
+#itemOne {
+  background:url("https://cdn-image.foodandwine.com/sites/default/files/styles/medium_2x/public/201204-xl-zimmern-soft-shell-crab.jpg?itok=QwTNS3E6");
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:center;
+}
+#itemTwo {
+  background:url("https://assetcloud02.roccommerce.net/w750-h510-cpad//_rastelli/7/5/3/1622_lobstertail_cooked_web.jpg");
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:center;
+}
+#itemTri {
+  background:url("https://img.delicious.com.au/7qM0cvJi/w1200/del/2015/10/mixed-sushi-and-sashimi-platter-15351-1.jpg");
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:center;
+}
+#itemFor {
+  background:url("https://i0.wp.com/prosperousfood.com/wp-content/uploads/2018/04/Shark-Fin-Soup.jpg?fit=647%2C500");
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:center;
+}
+#itemFiv {
+  background:url("http://www.chopstickchronicles.com/wp-content/uploads/2016/05/Fried-Calamari-with-Wasabi-Mayo.jpg");
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:center;
+}
+#itemSix {
+  background:url("http://4.bp.blogspot.com/-mdZqJPFXNSE/UA8kB-UYRXI/AAAAAAAACb4/Iri4ajSvXWU/s1600/photo+002.JPG");
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:center;
+}
+
+
+#finalBox {
+  width:50vw;
+  height:50vh;
+  margin-left:auto;
+  margin-right:auto;
+  background-color:blue;
+}
