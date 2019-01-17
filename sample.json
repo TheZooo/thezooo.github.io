@@ -1,29 +1,34 @@
 {
-  "bento":[
+  "food":[
       {
-        "type": "salmon",
-        "price": 7.79,
-        "ingredients": [
-           "rice",
-           "ume",
-           "lemon",
-           "gobo",
-           "ule",
-           "edamame"
-        ]
+        "item": "Soft Shell Crab",
+        "price": 4.99,
+        "desc": "A crunchy crab served with a lemon"
       },
       {
-        "type": "soft shell crab",
-        "price": 9.99,
-        "ingredients": [
-           "rice",
-           "ume",
-           "crab",
-           "tears",
-           "furikake",
-           "ule",
-           "edamame"
-        ]
+        "item": "Lobster",
+        "price": 11.99,
+        "desc": "Throughly boiled lobster, along with our own dipping sauce"
+      },
+      {
+        "item": "Sashimi Platter",
+        "price": 14.99,
+        "desc": "Can have salmon, tuna, ahi, beef, squid, in addition to soy sauce"
+      },
+      {
+        "item": "Shark Fin Soup",
+        "price": 10.99,
+        "desc": "A traditional chinese soup made from simmering shark fins"
+      },
+      {
+        "item": "Calamari",
+        "price": 3.99,
+        "desc": "Fried squid, good for a appetizer meal"
+      },
+      {
+        "item": "Grilled Squid",
+        "price": 3.99,
+        "desc": "Squid grilled, seasoned, and with lemon juices"
       }
     ]
 }
