@@ -1,18 +1,65 @@
 <html>
-  <head></head>
-  <body>
+  <head>
+    <link rel="stylesheet" type="text/css" href="foodShopStyle.css">
+    <script src="foodShopFunc.js"></script>
+  </head>
+  <body onload="startA()">
+    <div id="title">Eric's Seafood Resturant</div>
+    <flexbox>
+      <div class="itemBox" id="itemOne">
+        <div class="itemHead">Soft Shell Crabs</div>
+        <p class="itemDesc"></p>
+        <p class="itemCost"></p>
+        <input type="number" class="amtOrder">
+        <button class="amtOrdr">Order</button>
+      </div>
     
-    <script>
-      var xmlhttp = new XMLHttpRequest();
-      xmlhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) { //4 = ready ; 200 = okay
-          var myData = JSON.parse(this.responseText);
-          window.alert(myData.bento[0].price);
-          window.alert(myData.bento[1].ingredients[4]);
-        }
-      };
-      xmlhttp.open("GET", "sample.json", true);
-      xmlhttp.send();
-    </script>
+      <div class="itemBox" id="itemTwo">
+        <div class="itemHead">Lobster</div>
+        <p class="itemDesc"></p>
+        <p class="itemCost"></p>
+        <input type="number" class="amtOrder">
+        <button class="amtOrdr">Order</button>
+      </div>
+    
+      <div class="itemBox" id="itemTri">
+        <div class="itemHead">Sashimi Platter</div>
+        <p class="itemDesc"></p>
+        <p class="itemCost"></p>
+        <input type="number" class="amtOrder">
+        <button class="amtOrdr">Order</button>
+      </div>
+    </flexbox>
+    
+    <flexbox>
+      <div class="itemBox" id="itemFor">
+        <div class="itemHead">Shark Fin Soup</div>
+        <p class="itemDesc"></p>
+        <p class="itemCost"></p>
+        <input type="number" class="amtOrder">
+        <button class="amtOrdr">Order</button>
+      </div>
+    
+      <div class="itemBox" id="itemFiv">
+        <div class="itemHead">Calamari</div>
+        <p class="itemDesc"></p>
+        <p class="itemCost"></p>
+        <input type="number" class="amtOrder">
+        <button class="amtOrdr">Order</button>
+      </div>
+    
+      <div class="itemBox" id="itemSix">
+        <div class="itemHead">Grilled Squid</div>
+        <p class="itemDesc"></p>
+        <p class="itemCost"></p>
+        <input type="number" class="amtOrder">
+        <button class="amtOrdr">Order</button>
+      </div>
+    </flexbox>
+    
+    
+    <div id="orderBox">
+      <p>Your current order</p>
+    </div>
   </body>
 </html>
