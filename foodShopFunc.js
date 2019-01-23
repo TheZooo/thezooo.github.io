@@ -12,7 +12,7 @@ var ordersItem = [];
 
 function startA() {
   var xmlhttp = new XMLHttpRequest();
-  xmlhttp.onreadystatechange = function() {
+  xmlhttp.onreadystatechange = function(myData) {
     if (this.readyState == 4 && this.status == 200) { //4 = ready ; 200 = okay
       myData = JSON.parse(this.responseText);
       }
