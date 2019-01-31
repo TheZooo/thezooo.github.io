@@ -5,10 +5,23 @@
   <script src="foodShopFunc.js"></script>
 </head>
 
-<body onload="startB()">
+<body onload="startB()" onkeydown="kCustTip()">
   <div id="finalHeadBox">Here's your Order</div>
   <div id="finalBox">
     <ul id="finalOrder"></ul>
+    <div id="lineB"></div>
+    <p id="finalTotal"></p>
+    <button id="askTip" onclick="confirmTip()">Add Tip?</button>
+    <button id="tenPer" onclick="tenPer()"></button>
+    <button id="fiftenPer" onclick="fiftenPer()"></button>
+    <button id="twenPer" onclick="twenPer()"></button>
+    <div id="packCustTip">
+      <span id="dollarTip">$</span>
+      <input type="number" id="tipInput">
+      <button id="customTip" onclick="custTip()">Confirm Amount</button>
+    </div>
+    
+    <div id="thank">Thank You</div>
     <button id="return" onclick="done()">Return to Order page</button>
   </div>
 </body>
