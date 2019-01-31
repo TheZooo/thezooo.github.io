@@ -42,6 +42,7 @@ flexbox {
   border: rgba(0, 31, 84, 0.8) 2px solid;
   margin-bottom: 5px;
   overflow: hidden;
+  transition: background 1s;
 }
 
 .itemHead {
@@ -79,6 +80,27 @@ flexbox {
 
 .bttnOrder {
   margin-left: 5px;
+}
+
+.afterOrder {
+  display: none;
+}
+
+.purchased {
+  color: rgb(254, 252, 251);
+  margin-left: 5px;
+  font-size: 35px;
+  position:relative;
+  text-shadow: 0 0 3px black;
+  visibility: hidden;
+  transition: visibility 2s;
+}
+
+.moreOrder {
+  visibility: hidden;
+  margin-left: 5px;
+  position:relative;
+  transition: visibility 2s;
 }
 
 #itemOne {
@@ -185,7 +207,7 @@ li {
 
 
 #finalHeadBox {
-  width: 70vw;
+  width: 60vw;
   height: 15vh;
   font-size: 80px;
   padding-left: 5px;
@@ -217,6 +239,69 @@ li {
   margin-left: 5px;
 }
 
+#lineB {
+  width: 90%;
+  height: 2px;
+  margin-left: 10px;
+  background-color: black;
+  border-radius: 5px;
+}
+
+#finalTotal {
+  font-size: 30px;
+  text-align: center;
+  margin-top: 0;
+}
+
 #return {
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#askTip {
+  margin-left: 10px;
+  display: block;
+}
+
+#tenPer {
+  margin-left: 10px;
+  margin-bottom: 5px;
+  display: none;
+}
+
+#fiftenPer {
+  margin-left: 10px;
+  margin-bottom: 5px;
+  display: none;
+}
+
+#twenPer {
+  margin-left: 10px;
+  margin-bottom: 5px;
+  display: none;
+}
+
+#dollarTip {
+  margin-left: 10px;
+  display: none;
+}
+
+#tipInput {
+  width: 40px;
+  display: none;
+}
+
+#customTip {
   margin-left: 5px;
+  display: none;
+}
+
+#thank {
+  width: 74px;
+  height: 20px;
+  background-color:rgba(18, 130, 162, 0.5);
+  display: none;
+  border-radius: 2px;
+  margin-left: 10px;
 }
