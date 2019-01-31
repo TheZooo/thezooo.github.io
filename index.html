@@ -3,6 +3,7 @@
 <head>
   <link rel="stylesheet" type="text/css" href="foodShopStyle.css">
   <script src="foodShopFunc.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 </head>
 
 <body onload="startA()" onkeydown="kOrder(event)">
@@ -10,6 +11,10 @@
     <div id="title">Eric's Seafood Resturant</div>
     <flexbox>
       <div class="itemBox" id="itemOne">
+        <div class="afterOrder">
+          <p class="purchased">Thanks for the order!</p>
+          <button class="moreOrder" onclick="openInput()" onfocus="selectOne()">Wait. I want more</button>
+        </div>
         <div class="itemHead"></div>
         <div class="itemBody">
           <p class="itemDesc"></p>
@@ -17,10 +22,13 @@
           <input type="number" class="amtOrder" onfocus="selectOne()"><button class="bttnOrder" onclick="order()"
             onfocus="selectOne()">Order</button>
         </div>
-
       </div>
 
       <div class="itemBox" id="itemTwo">
+        <div class="afterOrder">
+          <p class="purchased">Thanks for the order!</p>
+          <button class="moreOrder" onclick="openInput()" onfocus="selectTwo()">Wait. I want more</button>
+        </div>
         <div class="itemHead"></div>
         <div class="itemBody">
           <p class="itemDesc"></p>
@@ -28,10 +36,13 @@
           <input type="number" class="amtOrder" onfocus="selectTwo()"><button class="bttnOrder" onclick="order()"
             onfocus="selectTwo()">Order</button>
         </div>
-
       </div>
 
       <div class="itemBox" id="itemTri">
+        <div class="afterOrder">
+          <p class="purchased">Thanks for the order!</p>
+          <button class="moreOrder" onclick="openInput()" onfocus="selectTri()">Wait. I want more</button>
+        </div>
         <div class="itemHead"></div>
         <div class="itemBody">
           <p class="itemDesc"></p>
@@ -39,12 +50,15 @@
           <input type="number" class="amtOrder" onfocus="selectTri()"><button class="bttnOrder" onclick="order()"
             onfocus="selectTri()">Order</button>
         </div>
-
       </div>
     </flexbox>
 
     <flexbox>
       <div class="itemBox" id="itemFor">
+        <div class="afterOrder">
+          <p class="purchased">Thanks for the order!</p>
+          <button class="moreOrder" onclick="openInput()" onfocus="selectFor()">Wait. I want more</button>
+        </div>
         <div class="itemHead"></div>
         <div class="itemBody">
           <p class="itemDesc"></p>
@@ -52,10 +66,13 @@
           <input type="number" class="amtOrder" onfocus="selectFor()"><button class="bttnOrder" onclick="order()"
             onfocus="selectFor()">Order</button>
         </div>
-
       </div>
 
       <div class="itemBox" id="itemFiv">
+        <div class="afterOrder">
+          <p class="purchased">Thanks for the order!</p>
+          <button class="moreOrder" onclick="openInput()" onfocus="selectFiv()">Wait. I want more</button>
+        </div>
         <div class="itemHead"></div>
         <div class="itemBody">
           <p class="itemDesc"></p>
@@ -63,10 +80,13 @@
           <input type="number" class="amtOrder" onfocus="selectFiv()"><button class="bttnOrder" onclick="order()"
             onfocus="selectFiv()">Order</button>
         </div>
-
       </div>
 
       <div class="itemBox" id="itemSix">
+        <div class="afterOrder">
+          <p class="purchased">Thanks for the order!</p>
+          <button class="moreOrder" onclick="openInput()" onfocus="selectSix()">Wait. I want more</button>
+        </div>
         <div class="itemHead"></div>
         <div class="itemBody">
           <p class="itemDesc"></p>
@@ -74,7 +94,6 @@
           <input type="number" class="amtOrder" onfocus="selectSix()"><button class="bttnOrder" onclick="order()"
             onfocus="selectSix()">Order</button>
         </div>
-
       </div>
     </flexbox>
 
