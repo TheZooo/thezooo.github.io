@@ -26,6 +26,7 @@ function startA() {
         d.getElementsByClassName('itemCost')[i].innerHTML = "$" + myData.food[i].price;
         d.getElementsByClassName('amtOrder')[i].value = 0;
         }
+      window.alert("TEST");
       }
     };
   xmlhttp.open("GET", "sample.json", true);
