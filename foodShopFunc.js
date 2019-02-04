@@ -20,17 +20,17 @@ function startA() {
   xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) { //4 = ready ; 200 = okay
       myData = JSON.parse(this.responseText);
+      for (i; i < boxes.length; i++) {
+        d.getElementsByClassName('itemHead')[i].innerHTML = myData.food[i].item;
+        d.getElementsByClassName('itemDesc')[i].innerHTML = myData.food[i].desc;
+        d.getElementsByClassName('itemCost')[i].innerHTML = "$" + myData.food[i].price;
+        d.getElementsByClassName('amtOrder')[i].value = 0;
+        }
       }
     };
   xmlhttp.open("GET", "sample.json", true);
   xmlhttp.send();
   localStorage.clear();
-  for (i; i < boxes.length; i++) {
-    d.getElementsByClassName('itemHead')[i].innerHTML = myData.food[i].item;
-    d.getElementsByClassName('itemDesc')[i].innerHTML = myData.food[i].desc;
-    d.getElementsByClassName('itemCost')[i].innerHTML = "$" + myData.food[i].price;
-    d.getElementsByClassName('amtOrder')[i].value = 0;
-  }
   d.getElementById('taxNow').innerHTML = "Tax rate: " + tax + "%";
 }
 
