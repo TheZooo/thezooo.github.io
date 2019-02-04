@@ -245,7 +245,7 @@ function discarded() {
 
 function done() {
   localStorage.clear();
-  location.href = "myFoodShop.html";
+  location.href = "index.html";
 }
 
 function confirmTip() {
