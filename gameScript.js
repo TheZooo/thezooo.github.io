@@ -55,7 +55,7 @@ function draw() {
   background(220);
   d = Math.floor(dist(ballA.x, ballA.y, ballB.x, ballB.y));
   image(imgA,30,30,ballSize,ballSize);
-  image(imgB,30,30,ballSize,ballSize);
+  image(imgB,50,50,ballSize,ballSize);
   
   if (d < ballSizeA) {
     collision();
