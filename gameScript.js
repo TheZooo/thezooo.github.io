@@ -39,32 +39,28 @@ var timerInterval = setInterval(winCondition, 1000); //Timer decrements by 1 sec
 
 var tacked = ["BOPPED", "TACKLED", "TRAMPLED", "DOMINATED", "CAUGHT", "PUNCHED"]; //Wow
 var winned = ["AVOIDED", "JUKED", "WINNER", "DITCHED", "LAPPED", "DODGED"]; //Wow
-let img;
+let imgA;
+let imgB;
 
-function preload() {
-  img = loadImage('asset/Z_Eric_Test.gif');
-}
 function setup() {
   createCanvas(w, h);
   document.getElementById('disTime').innerHTML = time;
   var limitTime = time - 25;
   powerOneAppear = Math.floor((Math.random() * limitTime) + 20);
-  image(imgA,30,30,50,50);
+  imgA = loadImage('runner.png');
+  imgB = loadImage('Z_Eric_Test.gif');
 }
 
 function draw() {
   background(220);
   d = Math.floor(dist(ballA.x, ballA.y, ballB.x, ballB.y));
+  image(imgA,30,30,ballSize,ballSize);
+  image(imgB,30,30,ballSize,ballSize);
+  
   if (d < ballSizeA) {
     collision();
     noLoop();
   }
-  
-  strokeWeight(1);
-  ballA.show();
-  ballA.move();
-  ballB.show();
-  ballB.move();
   
   if (time < powerOneAppear && powerOneAct === true) {
     powerA.show();
@@ -94,6 +90,12 @@ function draw() {
     ballSprintB = ballSpeedB + 3;
     powerDura--;
   }
+  
+  strokeWeight(1);
+  ballA.show();
+  ballA.move();
+  ballB.show();
+  ballB.move();
   
   var x = w - ballSize;
   var y = h - ballSize;
