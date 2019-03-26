@@ -1,117 +1,11 @@
 <html>
     <head>
-        <style>
-            body {
-                overflow: hidden;
-            }
-            #containDesc {
-                display: inline-block;
-                padding: 3px;
-                background-color: rgba(143, 143, 143, 0.5);
-                float: left;
-            }
-            #title {
-                width: 300px;
-                height: 20px;
-                font-size: 20px;
-                font-weight: bold;
-                padding: 2px;
-                border: 2px solid rgb(26, 84, 0);
-                background-color: rgba(183, 255, 150, 0.5);
-                user-select: none;
-            }
-            #text {
-                width: 300px;
-                padding: 2px;
-                margin-top: 2px;
-                border: 2px solid rgb(26, 84, 0);
-                background-color: rgba(183, 255, 150, 0.5);
-                display: inline-block;
-                user-select: none;
-            }
-            #gameBox {
-                max-width: 500px;
-                padding: 2px;
-                background-color: rgba(143, 143, 143, 0.5);
-                float: left;
-                margin-left: 2px;
-                user-select: none;
-            }
-            button {
-                margin-left: 2px;
-                margin-right: 2px
-            }
-        </style>
         <script>
-            var games = ["starterGameCompact.html", "platfrmrGameCompact.html", "gridSnake.html"];
-            var gameName = ["Cat & Mouse", "Dodgeball Platformer", "Snake Game"];
-            var selector = -1;
-            
             function start() {
-                for (var i = 0; i < games.length; i++) {
-                    var bttn = document.getElementsByTagName("button")[i];
-                    var btxt = document.createTextNode(gameName[i]);
-                    bttn.appendChild(btxt);
-                }
-            }
-            function selectorOne() {
-                selector = 0;
-            }
-            function selectorTwo() {
-                selector = 1;
-            }
-            function selectorThr() {
-                selector = 2;
-            }
-            function enterGame() {
-                location.href = games[selector];
-            }
-
-            //EXIT PACKAGE CODE (ADD onkeydown="exitFuncD(event)" onkeyup="exitFuncU(event)" in Body of html)
-            /*
-            var key;
-            var exitA = false;
-            var exitB = false;
-            var exitC = false;
-            function exitFuncD(event) {
-                key = event.keyCode;
-                if (key === 53) {
-                    exitA = true;
-                }
-                if (key === 56) {
-                    exitB = true;
-                }
-                if (key === 48) {
-                    exitC = true;
-                }
-                if (exitA && exitB && exitC) {
-                    location.href = "gameHub.html";
-                }
-            }
-            function exitFuncU(event) {
-                key = event.keyCode;
-                if (key === 53) {
-                    exitA = false;
-                }
-                if (key === 56) {
-                    exitB = false;
-                }
-                if (key === 48) {
-                    exitC = false;
-                }
-            }
-            */
+                location.href = "gameHub.html";   
+            }    
         </script>
     </head>
     <body onload="start()">
-        <div id="containDesc">
-            <div id="title">Eric's Entertainment Hub</div>
-            <div id="text">These are the games I have made. They vary in quality as these are mostly experimental and for me to learn. I've put a combination of keys to hold in these games to return to here (Hold 5, 8, and 0)</div>
-        </div>
-        <div id="gameBox">
-            <button onfocus="selectorOne()" onclick="enterGame()"></button>
-            <button onfocus="selectorTwo()" onclick="enterGame()"></button>
-            <button onfocus="selectorThr()" onclick="enterGame()"></button>
-        </div>
     </body>
 </html>    
