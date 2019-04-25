@@ -32,40 +32,60 @@
             #gameBox {
                 max-width: 500px;
                 padding: 2px;
-                background-color: rgba(143, 143, 143, 0.5);
+                background-color: rgba(78, 78, 78, 0.5);
                 float: left;
                 margin-left: 2px;
                 user-select: none;
             }
-            button {
-                margin-left: 2px;
-                margin-right: 2px
+            .gameLink {
+                display: inline-block;
+                background-color: rgba(255, 255, 255, 0.5);
+                border: 1px solid rgb(20,20,20);
+                padding: 2px;
+                margin-left: 4px;
+                margin-right: 4px;
+            }
+            .gameLink:hover {
+                background-color: rgb(255, 255, 255);
+                font-weight: bold;
+            }
+            .gameLink:active {
+                background-color: rgb(66, 66, 66);
             }
         </style>
         <script>
-            var games = ["starterGameCompact.html", "platfrmrGameCompact.html", "gridSnake.html"];
-            var gameName = ["Cat & Mouse", "Dodgeball Platformer", "Snake Game"];
+            //Note for adding new game, add to the nav and make a new function s[number]()
+            var htp = "https://thezooo.github.io/";
+            var nav = ["starterGame", "platformerGame", "snakeGame", "towerDefGame"];
             var selector = -1;
-            
             function start() {
-                for (var i = 0; i < games.length; i++) {
-                    var bttn = document.getElementsByTagName("button")[i];
-                    var btxt = document.createTextNode(gameName[i]);
-                    bttn.appendChild(btxt);
+                for (var i = 0; i < nav.length; i++) {
+                    var el = document.createElement("div");
+                    var txt = document.createTextNode(nav[i]);
+                    var attA = document.createAttribute("class");
+                    var attB = document.createAttribute("onmouseover");
+                    var attC = document.createAttribute("onmouseout");
+                    attA.value = "gameLink";
+                    attB.value = "s" + i + "()";
+                    attC.value = "out";
+                    var box = document.getElementById('gameBox');
+                    el.setAttributeNode(attA);
+                    el.setAttributeNode(attB);
+                    el.appendChild(txt);
+                    box.appendChild(el);
+                    document.getElementsByClassName('gameLink')[i].addEventListener("click", function() {4
+                        if (selector >= 0 && selector < nav.length) {
+                            var link = htp + nav[selector] + "/";
+                            location.href = link;
+                        }
+                    });
                 }
             }
-            function selectorOne() {
-                selector = 0;
-            }
-            function selectorTwo() {
-                selector = 1;
-            }
-            function selectorThr() {
-                selector = 2;
-            }
-            function enterGame() {
-                location.href = games[selector];
-            }
+            function out() {selector = -1};
+            function s0() {selector = 0};
+            function s1() {selector = 1};
+            function s2() {selector = 2};
+            function s3() {selector = 3};
 
             //EXIT PACKAGE CODE (ADD onkeydown="exitFuncD(event)" onkeyup="exitFuncU(event)" in Body of html)
             /*
@@ -85,7 +105,7 @@
                     exitC = true;
                 }
                 if (exitA && exitB && exitC) {
-                    location.href = "gameHub.html";
+                    location.href = "https://thezooo.github.io";
                 }
             }
             function exitFuncU(event) {
@@ -106,12 +126,10 @@
     <body onload="start()">
         <div id="containDesc">
             <div id="title">Eric's Entertainment Hub</div>
-            <div id="text">These are the games I have made. They vary in quality as these are mostly experimental and for me to learn. I've put a combination of keys to hold in these games to return to here (Hold 5, 8, and 0). NOTE: I found a better way to manage this site and will most likely change in the future</div>
+            <div id="text">These are the games I have made. They vary in quality as these are mostly experimental and for me to learn. I've put a combination of keys to hold in these games to return to here (Hold 5, 8, and 0)</div>
         </div>
         <div id="gameBox">
-            <button onfocus="selectorOne()" onclick="enterGame()"></button>
-            <button onfocus="selectorTwo()" onclick="enterGame()"></button>
-            <button onfocus="selectorThr()" onclick="enterGame()"></button>
+            
         </div>
     </body>
 </html>    
