@@ -1,16 +1,27 @@
-var w = window.innerWidth;
+<html>
+  <head>
+    <style>
+      canvas {
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+    </style>
+    <script src="p5/p5.min.js"></script>
+    <script>
+      var w = window.innerWidth;
       var h = window.innerHeight;
       //--------------------------------------
       var amtX = w * 0.05;
-      var setY = 300;
+      var setY = 400;
       var instX = [];
       var instAY = [];
       var instBY = [];
-      var baseChangeInc = 20;
+      var baseChangeInc = 30;
       var changeInc = baseChangeInc;
-      var changeRandom = 300;
+      var changeRandom = 60;
       var changeRAdd = setY - changeRandom/2;
-      var changeSpeed = 1;
+      var changeSpeed = 0.1;
       //---------------------------------------
       var interX = [];
       var interY = [];
@@ -43,12 +54,18 @@ var w = window.innerWidth;
           } else if (instAY[i] < instBY[i]) {
             instAY[i]+=changeSpeed;
           }
-          strokeWeight(10);
-          stroke(20,20,220,5);
-          line(instX[i],instAY[i],instX[i + 1],instAY[i + 1]);
+          strokeWeight(0);
+          fill(0, 0, 255, 0.8);
+          beginShape();
+          for (var ss = 0; ss < instX.length; ss++) {
+            vertex(instX[ss], instAY[ss]);
+          }
+          vertex(w, h);
+          vertex(0, h);
+          endShape(CLOSE);
         }
         if (changeInc <= 0) {
-          changeSpeed = Math.floor(Math.random() * 3) + 1;
+          changeSpeed = Math.floor(Math.random() * 1) + 0.1;
           if (instBY.length === instAY.length) {
             for (var ii = 0; ii < instAY.length; ii++) {
               instBY.pop();
@@ -127,3 +144,9 @@ var w = window.innerWidth;
           h = window.innerHeight;
           resizeCanvas(w, h);
       }
+    </script>
+  </head>
+  <body>
+    
+  </body>
+</html>
