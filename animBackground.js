@@ -1,14 +1,3 @@
-<html>
-  <head>
-    <style>
-      canvas {
-        position: absolute;
-        left: 0;
-        top: 0;
-      }
-    </style>
-    <script src="p5/p5.min.js"></script>
-    <script>
       var w = window.innerWidth;
       var h = window.innerHeight;
       //--------------------------------------
@@ -144,9 +133,3 @@
           h = window.innerHeight;
           resizeCanvas(w, h);
       }
-    </script>
-  </head>
-  <body>
-    
-  </body>
-</html>
