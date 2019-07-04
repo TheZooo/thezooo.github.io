@@ -98,8 +98,6 @@ var w = window.innerWidth;
             carX += Number(moveX.toFixed(2));
             carY += Number(moveY.toFixed(2));
             //------------------------------------------------------------------------------
-            background(220);
-
             fill(255, 10, 10);
             stroke(0);
             strokeWeight(1);
