@@ -65,12 +65,13 @@
         <script>
             //Note for adding new game, add to the nav and make a new function s[number]()
             var htp = "https://thezooo.github.io/";
-            var nav = ["starterGame", "platformerGame", "snakeGame", "towerDefGame", "racingGame", "perceptron"];
+            var name = ["starterGame", "platformerGame", "snakeGame", "towerDefGame", "racingGame", "perceptron", "Laser Eyes"]
+            var nav = ["starterGame", "platformerGame", "snakeGame", "towerDefGame", "racingGame", "perceptron", "theZooo_poseNet"];
             var selector = -1;
             function start() {
                 for (var i = 0; i < nav.length; i++) {
                     var el = document.createElement("div");
-                    var txt = document.createTextNode(nav[i]);
+                    var txt = document.createTextNode(name[i]);
                     var attA = document.createAttribute("class");
                     var attB = document.createAttribute("onmouseover");
                     var attC = document.createAttribute("onmouseout");
@@ -97,6 +98,7 @@
             function s3() {selector = 3};
             function s4() {selector = 4};
             function s5() {selector = 5};
+            function s6() {selector = 6};
 
             //EXIT PACKAGE CODE (ADD onkeydown="exitFuncD(event)" onkeyup="exitFuncU(event)" in Body of html)
             /*
