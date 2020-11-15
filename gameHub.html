@@ -65,13 +65,20 @@
         <script>
             //Note for adding new game, add to the nav and make a new function s[number]()
             var htp = "https://thezooo.github.io/";
-            var name = ["starterGame", "platformerGame", "snakeGame", "towerDefGame", "racingGame", "perceptron", "Laser Eyes"];
-            var nav = ["starterGame", "platformerGame", "snakeGame", "towerDefGame", "racingGame", "perceptron", "theZooo_poseNet"];
+            var nav = {
+                {name:"starterGame", direct:"starterGame"},
+                {name:"platformerGame", direct:"platformerGame"},
+                {name:"snakeGame", direct:"snakeGame"},
+                {name:"towerDefGame", direct:"towerDefGame"},
+                {name:"racingGame", direct:"racingGame"},
+                {name:"perceptron", direct:"perceptron"},
+                {name:"laserEyes", direct:"theZooo_poseNet"}
+            };
             var selector = -1;
             function start() {
                 for (var i = 0; i < nav.length; i++) {
                     var el = document.createElement("div");
-                    var txt = document.createTextNode(name[i]);
+                    var txt = document.createTextNode(nav[i].name);
                     var attA = document.createAttribute("class");
                     var attB = document.createAttribute("onmouseover");
                     var attC = document.createAttribute("onmouseout");
@@ -85,7 +92,7 @@
                     box.appendChild(el);
                     document.getElementsByClassName('gameLink')[i].addEventListener("click", function() {4
                         if (selector >= 0 && selector < nav.length) {
-                            var link = htp + nav[selector] + "/";
+                            var link = htp + nav[selector].direct + "/";
                             location.href = link;
                         }
                     });
